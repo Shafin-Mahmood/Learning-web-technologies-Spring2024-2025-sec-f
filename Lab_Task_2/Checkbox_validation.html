@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox Validation</title>
+</head>
+<body>
+    <form onsubmit="return validateCheckbox()">
+        <label>Select at least one option:</label><br>
+        <input type="checkbox" id="opt1"> Male<br>
+        <input type="checkbox" id="opt2"> Female<br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateCheckbox() {
+            if (!document.getElementById("opt1").checked && !document.getElementById("opt2").checked) {
+                alert("Select at least one option.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
