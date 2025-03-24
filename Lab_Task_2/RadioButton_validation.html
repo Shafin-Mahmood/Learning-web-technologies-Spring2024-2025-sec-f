@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radio Button Validation</title>
+</head>
+<body>
+    <form onsubmit="return validateRadio()">
+        <label>Select at least one option:</label><br>
+        <input type="radio" name="choice" id="opt1"> ssc<br>
+        <input type="radio" name="choice" id="opt2"> hsc<br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateRadio() 
+        
+        {
+            if (!document.getElementById("opt1").checked && !document.getElementById("opt2").checked) {
+                 alert("Select at least one option.");
+                   return false;
+            }
+             return true;
+        }
+    </script>
+</body>
+</html>
